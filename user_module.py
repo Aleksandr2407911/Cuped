@@ -6,6 +6,7 @@ from aiogram import F
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
+import re
 
 
 # Ответы для получения ключей
@@ -62,17 +63,20 @@ async def process_meeting(message: Message):
 async def process_delete(message: Message):
     await message.answer(text='Навсегда удалить бота')
 
-@router.callback_query(F.data == "button_key1")
-async def process_button_key1(state: FSMContext, message: Message):
-    await message.answer("Для получения доступа к ключу введите ответ на вопрос")
+@router.callback_query(F.data.startswith("button_key"))
+async def process_button_key(callback_query: CallbackQuery, state: FSMContext):
+    key_number = int(callback_query.data[-1])
+    await callback_query.message.answer(f"Для получения доступа к {keys[f'key{key_number}']} ключу введите ответ на вопрос")
     await state.set_state(UserState.waiting_for_input)
+    await state.update_data(key_number=key_number)
 
 @router.message(UserState.waiting_for_input)
 async def process_user_input_key1(message: Message, state: FSMContext):
     user_input = message.text
-    if user_input == answers_for_key['key1']:
-        await message.answer(f"Подзравляю вы ввели правильный ответ, ключ 1: {keys['key1']}")
-        await state.clear
+    data = await state.get_data()
+    key_number = data.get("key_number")
+    if user_input == answers_for_key[f'key{key_number}']:
+        await message.answer(f"Подзравляю вы ввели правильный ответ , ключ {key_number}: {keys[f'key{key_number}']}")
     else:
-        await message.answer("Неправильный ответ")
-
+        await message.answer(f"Неправильный ответ для {key_number} ключа, \n нажмите на кнопку ввода ответа после того как погаснет кнопка")
+    await state.clear()
