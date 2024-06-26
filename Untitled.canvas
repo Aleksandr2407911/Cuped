@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"512b8bac4d396acf","type":"text","text":"USER (VERA)","x":-140,"y":-160,"width":200,"height":59,"color":"1"},
+		{"id":"201fd49e8e277428","type":"text","text":"Admin(Sasha)","x":-140,"y":-440,"width":200,"height":59,"color":"1"},
+		{"id":"69644eb2e8eec3a6","type":"text","text":"Vera_s_cupid_bot ","x":-140,"y":-300,"width":200,"height":60,"color":"1"},
+		{"id":"371ab9972458c53e","type":"text","text":"функция удалить бота должна быть недоступна через месяц его работы","x":360,"y":-40,"width":200,"height":150,"color":"6"},
+		{"id":"974593a08c45df5d","type":"text","text":"мне должны приходить все действия которые делает вера","x":120,"y":-440,"width":200,"height":150,"color":"6"},
+		{"id":"175148a23f720ef2","type":"text","text":"Примечение:\n1) У каждого меню обязательная кнопка вернуться назад\n2) Этот бот должен каждый день желать доброе утро и сладких снов и скидывать прогноз гороскопа на день а так же прогноз погоды\n3","x":-1140,"y":-300,"width":260,"height":319,"color":"4"},
+		{"id":"1d6a58ec6e5d084d","type":"text","text":"после правильного ввода кодового слова эта кнопка пропадет и при нажатии на кнопку ключа будет показываться только ключ","x":-1110,"y":160,"width":200,"height":140,"color":"6"},
+		{"id":"524c19aecfe4c606","type":"text","text":"Похвалить создателя за класную идею","x":-300,"y":111,"width":200,"height":101,"color":"1"},
+		{"id":"9aa3e3b7de2fdbec","type":"text","text":"Поле пояснения функционала бота с кнопой далее","x":-140,"y":-31,"width":200,"height":101,"color":"1"},
+		{"id":"7d4839bc1356c42a","type":"text","text":"Послать создателя нахуй","x":20,"y":110,"width":200,"height":101,"color":"1"},
+		{"id":"040564aacfe979c3","type":"text","text":"Чтобы пойти на свидание с создателем нужно\nпройти тест:\n\n","x":-380,"y":630,"width":200,"height":131,"color":"1"},
+		{"id":"adf72e1696e9848a","type":"text","text":"1 ключ","x":-140,"y":640,"width":200,"height":59,"color":"1"},
+		{"id":"04f902ba5b632cf0","type":"text","text":"их 6 штук ","x":100,"y":640,"width":200,"height":59,"color":"1"},
+		{"id":"185e29f5d595f93c","type":"text","text":"ввести кодовое слово","x":-140,"y":761,"width":200,"height":59,"color":"1"},
+		{"id":"4cf570d5e9029adc","type":"text","text":"Поздравление и набор  цифр","x":-140,"y":860,"width":200,"height":80,"color":"1"},
+		{"id":"37de0ac0db45ea6b","type":"text","text":"Пойти на свидание с создателем","x":-380,"y":520,"width":200,"height":80,"color":"1"},
+		{"id":"acfd307b4e5148ad","type":"text","text":"Ключи","x":-140,"y":520,"width":200,"height":59,"color":"1"},
+		{"id":"e12d0bb80706477a","type":"text","text":"удалить бота","x":100,"y":525,"width":240,"height":54,"color":"1"},
+		{"id":"e69ff64a75d38dd6","type":"text","text":"Кнопка поднять настроение","x":-620,"y":520,"width":200,"height":80,"color":"1"},
+		{"id":"8be63e76ab760933","type":"text","text":"Да ","x":-70,"y":275,"width":180,"height":50,"color":"1"},
+		{"id":"9dc45b12ef139cc1","type":"text","text":"Нет","x":190,"y":275,"width":180,"height":50,"color":"1"},
+		{"id":"b7feb58d0fe9e178","type":"text","text":"Выскакивает предупреждение о том что доступ к боту будет потерян.","x":400,"y":160,"width":200,"height":150,"color":"6"}
+	],
+	"edges":[
+		{"id":"7bbe529586088388","fromNode":"adf72e1696e9848a","fromSide":"right","toNode":"04f902ba5b632cf0","toSide":"left"},
+		{"id":"c2eb411464bdf040","fromNode":"acfd307b4e5148ad","fromSide":"bottom","toNode":"adf72e1696e9848a","toSide":"top"},
+		{"id":"60e589e95a2ad8c0","fromNode":"69644eb2e8eec3a6","fromSide":"bottom","toNode":"512b8bac4d396acf","toSide":"top"},
+		{"id":"8c3dd07f59fa6100","fromNode":"69644eb2e8eec3a6","fromSide":"top","toNode":"201fd49e8e277428","toSide":"bottom"},
+		{"id":"d32aa4ac172613fb","fromNode":"adf72e1696e9848a","fromSide":"bottom","toNode":"185e29f5d595f93c","toSide":"top"},
+		{"id":"abf804338686d061","fromNode":"185e29f5d595f93c","fromSide":"bottom","toNode":"4cf570d5e9029adc","toSide":"top"},
+		{"id":"85836d69698f7e86","fromNode":"37de0ac0db45ea6b","fromSide":"bottom","toNode":"040564aacfe979c3","toSide":"top"}
+	]
+}
